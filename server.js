@@ -149,7 +149,8 @@ app.get('/carga', async (req, res) => {
 
     <label>Observaciones</label>
     <textarea name="observaciones" rows="2"></textarea>
-
+<label>Foto del ticket</label>
+   <input type="file" name="fotoTicket" accept="image/*" capture>
     <button type="submit">Guardar carga</button>
   </form>
 </body></html>`);
