@@ -177,7 +177,14 @@ a{display:block;padding:16px;border-radius:10px;color:white;text-decoration:none
   <a href="/" class="c2">← Menú principal</a>
 </body></html>`);
 });
-
+const storage = new Storage();
+   const bucket = storage.bucket('nombre-del-bucket');
+   const file = bucket.file(`tickets/${datos.fotoTicket.name}`);
+   await file.save(datos.fotoTicket.data, {
+     metadata: { contentType: datos.fotoTicket.type }
+   });
+   const fotoUrl = file.publicUrl();
+   sheet.getRange(fila, 18).setValue(fotoUrl);
 // ------------------------------------------------------------------
 // FORMULARIO CERRAR VIAJE
 // ------------------------------------------------------------------
