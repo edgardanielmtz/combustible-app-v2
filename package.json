@@ -1,0 +1,12 @@
+{
+  "name": "combustible-app-v2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.18.2",
+    "googleapis": "^140.0.0",
+    "express-fileupload": "^1.5.0",
+    "@google-cloud/vision": "^4.3.0"
+  }
+}
